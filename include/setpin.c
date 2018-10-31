@@ -50,7 +50,7 @@ void setpinvalue(uint8_t value, uint8_t position){
 	pin = finalpos(position);
 
 	if (position >= 8){
-		// value
+		// low
 		if (value == 0){
 			clr_bit(PORTB, pin);
 		}

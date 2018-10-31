@@ -6,6 +6,7 @@ void led_on(uint8_t position){
 	// input = clr
 	// output = set
 	uint8_t pin;
+	setpinmode(1, position);
 
 	pin = finalpos(position);
 
@@ -23,6 +24,7 @@ void led_off(uint8_t position){
 	// input = clr
 	// output = set
 	uint8_t pin;
+	setpinmode(1, position);
 
 	pin = finalpos(position);
 
@@ -39,6 +41,7 @@ void led_off(uint8_t position){
 void blink_led(uint8_t position, double delay){
 
 	uint8_t pin;
+	setpinmode(1, position);
 
 	pin = finalpos(position);
 

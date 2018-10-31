@@ -21,13 +21,11 @@
 
 int main(void){	
 	uart_init();
-	setpinmode(1, 8);
+	definedistpins(8, 9);
+
 
 	while(1){
-		led_on(8);
-		m_delay(1000);
-		led_off(8);
-		m_delay(1000);
+		printf("%i\n", distanceSensor(8,9));
 	}
 
 	return 0;

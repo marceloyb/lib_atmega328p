@@ -10,7 +10,7 @@ void definedistpins(uint8_t trigger, uint8_t echo){
 
 uint32_t distanceSensor (uint8_t trigger, uint8_t echo){
 	setpinvalue(OUTPUT, trigger);
-	_delay_us(10);
+	_delay_us(50);
 	setpinvalue(INPUT, trigger);
 	i = 0;
 	j = 0;
@@ -34,7 +34,7 @@ uint32_t distanceSensor (uint8_t trigger, uint8_t echo){
 		while (!isset_bit(PIND, finalecho));
 
 		while (isset_bit(PIND, finalecho)){
-			_delay_us(1);
+			u_delay(1);
 			i++;
 			j++;
 			if (j >= 13){
